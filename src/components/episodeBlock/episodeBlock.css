@@ -1,0 +1,30 @@
+.image-wrapper {
+    width: 50%;
+}
+
+.image-wrapper img {
+    width: 100%;
+}
+
+.podcast {
+
+}
+
+.episode {
+
+}
+
+.info {
+    width: 100%;
+}
+
+.block.episode {
+    width: 34%;
+    display: inline-block;
+}
+
+.episode div {
+    display: inline-block;
+    width: 50%;
+    vertical-align: middle;
+}

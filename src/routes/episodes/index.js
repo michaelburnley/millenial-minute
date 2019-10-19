@@ -3,33 +3,34 @@ import Block from '../../components/episodeBlock';
 import feed from '../../helpers';
 
 class Episodes extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             rss: '',
+            blocks: [],
         };
     }
 
-    async componentDidMount() {
-        const rss = await feed();
-        await this.setState({ rss });
+    componentDidMount() {
+        this.renderBlock();
     }
 
-    renderRss = async () => {
-        const { items } = this.state.rss;
+    renderBlock = async () => {
+        const rss = await feed();
+        const { items } = rss;
         const blocks = [];
         for (const item of items) {
-            const episode = Block(item);
-            blocks.push()
+            const episode = <Block setPlayer={this.props.setPlayer} data={item} />;
+            blocks.push(episode)
         }
-        return blocks;
+        this.setState({ blocks });
     }
 
     render() {
         return(
             <div>
                 {
-                    this.state.rss && this.renderRss()
+                    this.state.blocks
                 }
             </div>
         );

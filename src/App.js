@@ -1,7 +1,8 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import Header from './components/header';
-import Episodes from './routes/episodes';
+import Footer from './components/footer';
+import Routes from './components/routes';
 import './App.css';
 
 function App() {
@@ -9,7 +10,8 @@ function App() {
     <div className="App">
       <Router>
         <Header />
-        <Episodes />
+          <Routes />
+        <Footer />
       </Router>
     </div>
   );
