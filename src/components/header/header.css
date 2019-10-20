@@ -1,0 +1,9 @@
+header {
+    display: inline-block;
+    padding-top: 10%;
+}
+
+header nav, header h1 {
+    width: 49%;
+    display: inline-block;
+}

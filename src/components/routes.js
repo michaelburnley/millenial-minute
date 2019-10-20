@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route } from "react-router-dom";
-import Home from '../routes/episodes';
+import Home from '../routes/home';
 import Episodes from '../routes/episodes';
 import Player from './player';
 
@@ -43,6 +43,7 @@ class Routes extends Component {
             showPlayer,
             player
         } = this.state;
+
         return(
             <React.Fragment>
                 <Route 

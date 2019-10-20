@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Block from '../../components/episodeBlock';
 import feed from '../../helpers';
+import Loader from 'react-loader-spinner'
 import './episodes.css'
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 
 class Episodes extends Component {
     constructor(props) {
@@ -31,7 +33,13 @@ class Episodes extends Component {
         return(
             <div className="episodes">
                 {
-                    this.state.blocks
+                    this.state.blocks.length > 0 ? this.state.blocks : 
+                    <Loader
+                        type="ThreeDots"
+                        color="#f0ccd8"
+                        height={100}
+                        width={100}
+                        timeout={6000} />
                 }
             </div>
         );

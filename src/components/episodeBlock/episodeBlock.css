@@ -52,8 +52,32 @@
 }
 
 .podcast.content {
-
     position: relative;
     height: 100px;
+}
 
+.detailed.image-wrapper {
+    max-width: initial !important;
+    max-height: initial !important;
+    width: 50%;
+}
+
+.detailed .podcast.content {
+    width: 50%;
+    height: initial;
+}
+
+.detailed .podcast div{
+    position: relative !important;
+}
+
+.detailed .image-wrapper img {
+    max-width: initial !important;
+    max-height: initial !important;
+}
+
+.detailed.block.episode {
+    max-width: initial !important;
+    width: 100% !important;
+    border-bottom: initial !important;
 }

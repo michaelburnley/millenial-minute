@@ -2,7 +2,16 @@ import React from 'react';
 import moment from 'moment';
 import './episodeBlock.css';
 
-export default ({ data, setPlayer }) => {
+const Detailed = ({ date, content, link, pubDate }) => (
+    <React.Fragment>
+        <div className="info description">{ content }</div>
+        <div className="info date">{ date }</div>
+        <div className="info link">{ link }</div>
+        <div className="info date">{ pubDate }</div>
+    </React.Fragment>
+);
+
+export default ({ data, setPlayer, detailed }) => {
     const {
         contentSnippet,
         isoDate,
@@ -22,10 +31,13 @@ export default ({ data, setPlayer }) => {
     const image_url = `/images/episodes/${episode_clean}.jpg`;
 
     console.log(`Test title: ${episode_clean}`, image_url);
-
+    
+    const date = moment().format(`DD-MM-YYYY`, isoDate);
+    const content = contentSnippet.length > 100 ? contentSnippet.substring(0, contentSnippet.lastIndexOf(' ', 97)) : contentSnippet;
+    const classes = detailed ? `block episode detailed` : `block episode`;
 
     return(
-        <div className='block episode'>
+        <div className={classes}>
             <div className='image-wrapper' onClick={clickHandler}>
                 <img onError={(e) => {
                     e.target.src = itunes.image;
@@ -37,16 +49,14 @@ export default ({ data, setPlayer }) => {
             <div className='podcast content'>
                 <div className='image-wrapper play-button' onClick={clickHandler}><img alt='Play Episode' src="/images/play-button.png" /></div>
                 <div className="info title">{ title.replace(/S[0-9]*E[0-9]*:/, ``) }</div>
+                {
+                    detailed && <Detailed content={content} date={date} link={link} pubDate={pubDate} />
+                }
 
             </div>
         </div>
     );
 };
 
-// const date = moment().format(`DD-MM-YYYY`, isoDate);
-//     const content = contentSnippet.length > 100 ? contentSnippet.substring(0, contentSnippet.lastIndexOf(' ', 97)) : contentSnippet;
-    
-                // {/* <div className="info description">{ content }</div>
-                // <div className="info date">{ date }</div>
-                // <div className="info link">{ link }</div> */}
-                // {/* <div className="info date">{ pubDate }</div> */}
+
+                

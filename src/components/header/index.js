@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './header.css';
 
 export default () => (
     <header>
-        <h1>Millenial Minute</h1>
         <nav>
             <ul>
                 <li><Link to='/episodes'>Episodes</Link></li>
@@ -12,5 +12,6 @@ export default () => (
                 <li><Link to='/donate'>Donate</Link></li>
             </ul>
         </nav>
+        <h1><Link to='/'>Millenial Minute</Link></h1>
     </header>
 );

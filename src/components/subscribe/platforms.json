@@ -1,0 +1,14 @@
+{
+    "Apple Podcasts": {
+        "url": "https://podcasts.apple.com/us/podcast/millennial-minute-podcast/id1434235316",
+        "icon": "apple_podcast.png"
+    },
+    "Spotify": {
+        "url": "https://open.spotify.com/show/682BlA7k8q4u2pOswpQtyA",
+        "icon": "spotify_podcast.png"
+    },
+    "Google Podcasts": {
+        "url": "https://podcasts.google.com/?feed=aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS8yMDQ2MDMucnNz&hl=en",
+        "icon": "google_podcast.png"
+    }
+}
