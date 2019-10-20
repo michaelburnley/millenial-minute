@@ -10,9 +10,15 @@
     right: 0;
     margin-left: auto;
     margin-right: auto;
+    grid-column: 3/19; 
 }
 
 #home {
     position: relative;
     height: 1000px;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(10, 200px);
+    margin: auto;
+    max-width: 1615px;
 }

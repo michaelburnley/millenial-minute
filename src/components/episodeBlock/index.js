@@ -4,10 +4,8 @@ import './episodeBlock.css';
 
 const Detailed = ({ date, content, link, pubDate }) => (
     <React.Fragment>
-        <div className="info description">{ content }</div>
         <div className="info date">{ date }</div>
-        <div className="info link">{ link }</div>
-        <div className="info date">{ pubDate }</div>
+        <div className="info description">{ content }</div>
     </React.Fragment>
 );
 
@@ -38,11 +36,11 @@ export default ({ data, setPlayer, detailed }) => {
 
     return(
         <div className={classes}>
-            <div className='image-wrapper' onClick={clickHandler}>
+            <div className={'image-wrapper'} onClick={clickHandler}>
                 <img onError={(e) => {
-                    e.target.src = itunes.image;
-                    e.target.style.border = 'solid white 14px';
-                    e.target.style.width = '90%';
+                        e.target.src = itunes.image;
+                        e.target.style.border = 'solid white 14px';
+                        e.target.style.width = '90%';
                     }}
                     src={image_url} alt={title} />
             </div>

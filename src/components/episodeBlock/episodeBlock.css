@@ -57,14 +57,25 @@
 }
 
 .detailed.image-wrapper {
-    max-width: initial !important;
+    max-width: 450px !important;
     max-height: initial !important;
     width: 50%;
+    left: 0;
+    position: absolute !important;
+}
+
+.detailed .image-wrapper {
+    max-width: 500px !important;
+    left: 0;
+    position: absolute;
 }
 
 .detailed .podcast.content {
     width: 50%;
     height: initial;
+    position: absolute;
+    right: 0;
+    top: 15%;
 }
 
 .detailed .podcast div{
@@ -80,4 +91,31 @@
     max-width: initial !important;
     width: 100% !important;
     border-bottom: initial !important;
+    height: 450px;
+    margin-bottom: 10%;
+}
+
+.detailed .info.title {
+    /* position: absolute !important; */
+    font-size: 40px;
+}
+
+.detailed .info.date {
+    /* position: absolute !important; */
+    margin-top: 5%;
+    text-align: left;
+}
+
+.detailed .info.description {
+    margin-top: 2%;
+    text-align: left;
+    font-size: 30px;
+}
+
+.detailed .play-button {
+    display: none;
+}
+
+.detailed .podcast div {
+    right: initial;
 }

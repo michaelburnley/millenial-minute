@@ -7,3 +7,21 @@ header nav, header h1 {
     width: 49%;
     display: inline-block;
 }
+
+.container {
+    max-width: 1615px;
+    margin: auto;
+}
+
+header, #footer {
+    background-color: #282c34;
+    /* min-height: 50vh; */
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(25px);
+    color: white;
+    width: 100%;
+  }
+  

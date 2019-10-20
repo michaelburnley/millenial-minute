@@ -5,6 +5,7 @@
 
 .platform {
     display: inline-block;
+    margin: 10px;
 }
 
 .header::before {
