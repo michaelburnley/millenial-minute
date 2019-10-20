@@ -1,21 +1,21 @@
 import React from 'react';
 
-"handles": {
-    "instagram": {
-        "handle": "",
-        "url": ""
-    },
-    "facebook": {
-        "handle": "",
-        "url": ""
-    },
-    "twitter": {
-        "handle": "",
-        "url": ""
-    }
-},
-"biography": "",
-"picture": ""
+// "handles": {
+//     "instagram": {
+//         "handle": "",
+//         "url": ""
+//     },
+//     "facebook": {
+//         "handle": "",
+//         "url": ""
+//     },
+//     "twitter": {
+//         "handle": "",
+//         "url": ""
+//     }
+// },
+// "biography": "",
+// "picture": ""
 
 const showHandles = (handles) => {
     const arr = [];

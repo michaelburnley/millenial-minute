@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Block from '../../components/episodeBlock';
 import feed from '../../helpers';
+import './episodes.css'
 
 class Episodes extends Component {
     constructor(props) {
@@ -28,7 +29,7 @@ class Episodes extends Component {
 
     render() {
         return(
-            <div>
+            <div className="episodes">
                 {
                     this.state.blocks
                 }
