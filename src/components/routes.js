@@ -16,6 +16,7 @@ class Routes extends Component {
                 title: '',
                 image: '',
             },
+            paused: true,
         };
         this.audio = null;
         this.audioRef = element => {
@@ -23,16 +24,28 @@ class Routes extends Component {
         };
     }
 
+    startAudio = () => {
+        this.audio.pause();
+        this.audio.load();
+        this.audio.play();
+    }
+
     setPlayer = async (data) => {
+        
+        data.url !== this.state.player.url && window.PauseAllPlayButtons();
+
+        const paused = data.url !== this.state.player.url ? true : false;
+
         await this.setState({
             showPlayer: true,
             player: {
                 ...data
             },
+            paused: !paused,
         });
-        this.audio.pause();
-        this.audio.load();
-        this.audio.play();
+        this.state.paused ? this.audio.pause() : this.startAudio();
+        
+        return !paused;
     }
 
     togglePlayer = () => {

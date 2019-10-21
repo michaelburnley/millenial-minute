@@ -8,7 +8,7 @@ import './detail.css';
 export default (props) => {
     const { params: { episode_id } } = props.match;
     const [episode, setEpisode] = useState(``);
-    console.log(props)
+
     useEffect(() => {
         const getFeed = async () => {
             const { items } = await feed();

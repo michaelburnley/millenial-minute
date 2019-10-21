@@ -1,6 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
+import PlayButton from '../../components/playButton';
 
 import './episodeBlock.css';
 
@@ -22,8 +23,11 @@ export default ({ data, setPlayer, detailed }) => {
         enclosure,
     } = data;
 
+    const url = enclosure.url;
+    const image = itunes.image;
+
     const clickHandler = () => {
-        setPlayer({ url: enclosure.url, title, image: itunes.image });
+        setPlayer({ url, title, image: itunes.image });
     }
 
     const episode_number = title.match(/S[0-9]*E[0-9]*/);
@@ -48,7 +52,8 @@ export default ({ data, setPlayer, detailed }) => {
                 </Link>
             </div>
             <div className='podcast content'>
-                <div className='image-wrapper play-button' onClick={clickHandler}><img alt='Play Episode' src="/images/play-button.png" /></div>
+                {/* <div className='image-wrapper play-button' onClick={clickHandler}><img alt='Play Episode' src="/images/play-button.png" /></div> */}
+                <PlayButton setPlayer={setPlayer} url={url} image={image} title={title} />
                 <div className="info title">{ title.replace(/S[0-9]*E[0-9]*:/, ``) }</div>
                 {
                     detailed && <Detailed content={content} date={date} link={link} pubDate={pubDate} />
