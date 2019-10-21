@@ -9,7 +9,7 @@ export default () => (
                 <ul>
                     <li><Link to='/episodes'>Episodes</Link></li>
                     <li><Link to='/about'>About</Link></li>
-                    <li><Link to='/shop'>Shop</Link></li>
+                    <li><a href='https://millenial-minute.myshopify.com/'>Shop</a></li>
                     <li><a href='https://www.patreon.com/MillennialMinPodcast'>Donate</a></li>
                 </ul>
             </nav>
