@@ -26,10 +26,6 @@ export default ({ data, setPlayer, detailed }) => {
     const url = enclosure.url;
     const image = itunes.image;
 
-    const clickHandler = () => {
-        setPlayer({ url, title, image: itunes.image });
-    }
-
     const episode_number = title.match(/S[0-9]*E[0-9]*/);
     const episode_clean = episode_number && episode_number[0].replace(`E0`, `E`);
     const image_url = `/images/episodes/${episode_clean}.jpg`;
@@ -52,7 +48,6 @@ export default ({ data, setPlayer, detailed }) => {
                 </Link>
             </div>
             <div className='podcast content'>
-                {/* <div className='image-wrapper play-button' onClick={clickHandler}><img alt='Play Episode' src="/images/play-button.png" /></div> */}
                 <PlayButton setPlayer={setPlayer} url={url} image={image} title={title} />
                 <div className="info title">{ title.replace(/S[0-9]*E[0-9]*:/, ``) }</div>
                 {

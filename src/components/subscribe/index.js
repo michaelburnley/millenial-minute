@@ -12,7 +12,7 @@ export default () => {
             url,
             icon
         } = platforms[key];
-        const element = <div className='platform'><a href={url}><img alt={key} src={`images/platforms/${icon}`} /></a></div>
+        const element = <div className='platform'><a href={url}><img alt={key} src={`/images/platforms/${icon}`} /></a></div>
         elements.push(element);
     }
 

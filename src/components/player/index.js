@@ -1,25 +1,22 @@
 import React from 'react';
 import './player.css';
 
-export default class Player extends React.Component {
+export default (props) => {
+    const {
+        url,
+        title,
+        // image 
+    } = props;
 
-    render() {
-        const {
-            url,
-            title,
-            // image 
-        } = this.props;
-    
-        const cleanTitle = title.split(': ')[1];
-        const season = title.split(':')[0];
-        return (
-            <div className='player'>
-                <div className='pod-season'>{ season }</div>
-                <div className='pod-title'>{ cleanTitle }</div>
-                <audio controls ref={this.props.audioRef}>
-                    <source src={ url } type='audio/mpeg' />
-                </audio>
-            </div>
-        );
-    }
+    const cleanTitle = title.split(': ')[1];
+    const season = title.split(':')[0];
+    return (
+        <div className='player'>
+            <div className='pod-season'>{ season }</div>
+            <div className='pod-title'>{ cleanTitle }</div>
+            <audio controls ref={props.audioRef}>
+                <source src={ url } type='audio/mpeg' />
+            </audio>
+        </div>
+    );
 }

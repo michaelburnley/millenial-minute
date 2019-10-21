@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import _ from 'lodash';
 import feed from '../../helpers';
 import Block from '../../components/episodeBlock';
+import Subscribe from '../../components/subscribe';
 import './detail.css';
 
 
@@ -20,10 +21,13 @@ export default (props) => {
     },[]);
 
     return(
-        <div className='episode detail'>
-            {
-                episode && <Block setPlayer={props.setPlayer} data={episode} detailed={true} />
-            }
-        </div>
+        <React.Fragment>
+            <div className='episode detail'>
+                {
+                    episode && <Block setPlayer={props.setPlayer} data={episode} detailed={true} />
+                }
+            </div>
+            <Subscribe />
+        </React.Fragment>
     );
 }
