@@ -1,35 +1,29 @@
-import React, { Component } from 'react';
+import React, { Component, useState, useEffect } from 'react';
 import feed from '../../helpers';
 import Episode from '../../components/episodeBlock';
 import Subscribe from '../../components/subscribe';
 import './home.css';
 
-class Home extends Component {
-    constructor() {
-        super();
-        this.state = {
-            block: '',
-        };
-    }
+export default (props) => {
+    const [block, setBlock] = useState('');
+    
+    useEffect(() => {
+        async function renderFeed() {
+            const { items: [first, ...rest]} = await feed();
+            setBlock(first);
+        }
+        renderFeed();
+    }, []);
 
-    async componentDidMount() {
-        const { items: [block, ...rest]} = await feed();
-        this.setState({ block });
-    }
-
-    render() {
-        return(
-            <div id="home" style={{ position: 'relative' }}>
+    return(
+        <div id="home" style={{ position: 'relative' }}>
                 <div className="main-block">
                 {
-                    this.state.block && <Episode setPlayer={this.props.setPlayer} data={this.state.block} detailed={true} />
+                    block && <Episode setPlayer={props.setPlayer} data={block} detailed={true} />
                 }
                 
-                    <Subscribe />
+                <Subscribe />
                 </div>
-            </div>
-        );
-    }
+        </div>
+    );
 }
-
-export default Home;

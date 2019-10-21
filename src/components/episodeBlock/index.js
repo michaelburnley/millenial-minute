@@ -27,11 +27,9 @@ export default ({ data, setPlayer, detailed }) => {
     const episode_number = title.match(/S[0-9]*E[0-9]*/);
     const episode_clean = episode_number && episode_number[0].replace(`E0`, `E`);
     const image_url = `/images/episodes/${episode_clean}.jpg`;
-
-    console.log(`Test title: ${episode_clean}`, image_url);
     
     const date = moment().format(`DD-MM-YYYY`, isoDate);
-    const content = contentSnippet.length > 100 ? contentSnippet.substring(0, contentSnippet.lastIndexOf(' ', 97)) : contentSnippet;
+    const content = contentSnippet;
     const classes = detailed ? `block episode detailed` : `block episode`;
 
     return(

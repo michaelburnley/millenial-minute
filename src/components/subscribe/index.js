@@ -23,7 +23,7 @@ export default () => {
                 elements
             }
             <div className="lineButton">
-                <a href="/episodes"><div className='button'>All Episodes</div></a>
+                <a class='button' href="/episodes">All Episodes</a>
             </div>
         </div>
     )

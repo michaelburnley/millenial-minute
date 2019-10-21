@@ -24,7 +24,6 @@ class Routes extends Component {
     }
 
     setPlayer = async (data) => {
-        console.log('setting player')
         await this.setState({
             showPlayer: true,
             player: {
@@ -54,14 +53,13 @@ class Routes extends Component {
                     render={(props) => <Home {...props} setPlayer={this.setPlayer} />}  />
                 <Route 
                     path='/episodes'
-                    render={(props) => <Episodes {...props} setPlayer={this.setPlayer} />}  />
+                    render={(props) => <Episodes {...props} setPlayer={this.setPlayer} />}  exact/>
                 <Route 
                     path='/about'
                     render={(props) => <About {...props} setPlayer={this.setPlayer}/>} />
                 <Route
                     path='/episodes/:episode_id'
-                    component={EpisodeDetail}
-                    />
+                    render={(props) => <EpisodeDetail {...props} setPlayer={this.setPlayer} />} />
                 {
                     showPlayer && <Player {...player} audioRef={this.audioRef}/>
                 }
