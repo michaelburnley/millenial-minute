@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { Route } from "react-router-dom";
 import Home from '../routes/home';
+import About from '../routes/about';
 import Episodes from '../routes/episodes';
+import EpisodeDetail from '../routes/episodeDetail';
 import Player from './player';
 
 class Routes extends Component {
@@ -54,7 +56,12 @@ class Routes extends Component {
                     path='/episodes'
                     render={(props) => <Episodes {...props} setPlayer={this.setPlayer} />}  />
                 <Route 
-                    path='/about'  />
+                    path='/about'
+                    render={(props) => <About {...props} setPlayer={this.setPlayer}/>} />
+                <Route
+                    path='/episodes/:episode_id'
+                    component={EpisodeDetail}
+                    />
                 {
                     showPlayer && <Player {...player} audioRef={this.audioRef}/>
                 }

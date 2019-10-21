@@ -1,0 +1,29 @@
+.name, .age {
+    font-size: 25px;
+    text-transform: uppercase;
+    display: inline;
+    margin-right: 1%;
+}
+
+.name-age {
+    display: inline-block;
+    width: 100%;
+}
+
+.cast .info {
+    width: 50%;
+    margin: 1%;
+    text-align: left;
+    display: inline-block;
+}
+
+.cast .image-wrapper {
+    width: 50%;
+    display: inline-block;
+}
+
+.cast {
+    max-width: 1200px;
+    margin: auto;
+
+}

@@ -13,9 +13,8 @@ class Home extends Component {
     }
 
     async componentDidMount() {
-        const { items: [block, block2, ...rest]} = await feed();
-        this.setState({ block: block });
-        console.log(`here ${JSON.stringify(block2)}`);
+        const { items: [block, ...rest]} = await feed();
+        this.setState({ block });
     }
 
     render() {

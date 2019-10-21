@@ -1,92 +1,27 @@
 {
-    "Bryan": {
-        "handles": {
-            "instagram": {
-                "handle": "",
-                "url": ""
-            },
-            "facebook": {
-                "handle": "",
-                "url": ""
-            },
-            "twitter": {
-                "handle": "",
-                "url": ""
-            }
-        },
-        "biography": "",
-        "picture": ""
-    },
     "Rod": {
-        "handles": {
-            "instagram": {
-                "handle": "",
-                "url": ""
-            },
-            "facebook": {
-                "handle": "",
-                "url": ""
-            },
-            "twitter": {
-                "handle": "",
-                "url": ""
-            }
-        },
-        "biography": "",
-        "picture": ""
+        "age": 26,
+        "bio": "Born and Raised in California. Jack of all trades, master of none. Interests include running my small business, the podcast, and spending time with Itzetl.",
+        "image": ""
     },
-    "T": {
-        "handles": {
-            "instagram": {
-                "handle": "",
-                "url": ""
-            },
-            "facebook": {
-                "handle": "",
-                "url": ""
-            },
-            "twitter": {
-                "handle": "",
-                "url": ""
-            }
-        },
-        "biography": "",
-        "picture": ""
+    "Bryan": {
+        "age": 26,
+        "bio": "Raised in SoCal, creative, outgoing, student working on getting is bachelors in psychology. Eventually pursuing a master in I/O. YouTube personality; life wanderer & king of overthinking",
+        "image": ""
+    },
+    "Tiany": {
+        "age": 26,
+        "bio": "Yo it’s your girl T! I love all things Harry Potter, Disney, and Funko Pops....that’s pretty much it, JK! I make YouTube videos and occasionally like hangin out with my high school homies to record a lil thing called The Millennial Minute.",
+        "image": ""
     },
     "Alif": {
-        "handles": {
-            "instagram": {
-                "handle": "",
-                "url": ""
-            },
-            "facebook": {
-                "handle": "",
-                "url": ""
-            },
-            "twitter": {
-                "handle": "",
-                "url": ""
-            }
-        },
-        "biography": "",
-        "picture": ""
+        "age": 26,
+        "bio": "Sociology and Economics major 📚\nI devote my time to fitness 💪🏼\nI love food.😋\nI like cracking dad jokes.\nMeme connoisseur",
+        "image": ""
     },
-    "Chibz": {
-        "handles": {
-            "instagram": {
-                "handle": "",
-                "url": ""
-            },
-            "facebook": {
-                "handle": "",
-                "url": ""
-            },
-            "twitter": {
-                "handle": "",
-                "url": ""
-            }
-        },
-        "biography": "",
-        "picture": ""
+    "Chibuzo": {
+        "age": 26,
+        "bio": "I'M living in DC and getting getting my masters in project management. I'm into playing basketball and catching up on My Hero Academia.",
+        "image": ""
     }   
 }
