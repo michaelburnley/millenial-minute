@@ -14,13 +14,13 @@ export default (props) => {
             const { items } = rss;
             const arr = [];
             for (const item of items) {
-                const episode = <Block setPlayer={props.setPlayer} data={item} />;
+                const episode = <Block setPlayer={props.setPlayer} data={item} key={item.title} />;
                 arr.push(episode)
             }
             setBlocks(arr);
         }
         renderFeed();
-    }, []);
+    }, [props.setPlayer]);
 
     return(
         <div className="episodes">

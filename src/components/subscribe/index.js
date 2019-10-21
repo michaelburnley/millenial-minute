@@ -12,7 +12,7 @@ export default () => {
             url,
             icon
         } = platforms[key];
-        const element = <div className='platform'><a href={url}><img alt={key} src={`/images/platforms/${icon}`} /></a></div>
+        const element = <div key={key} className='platform'><a href={url}><img alt={key} src={`/images/platforms/${icon}`} /></a></div>
         elements.push(element);
     }
 
@@ -23,7 +23,7 @@ export default () => {
                 elements
             }
             <div className="lineButton">
-                <a class='button' href="/episodes">All Episodes</a>
+                <a className='button' href="/episodes">All Episodes</a>
             </div>
         </div>
     )

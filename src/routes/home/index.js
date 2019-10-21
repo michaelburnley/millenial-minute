@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import feed from '../../helpers';
 import Episode from '../../components/episodeBlock';
 import Subscribe from '../../components/subscribe';
@@ -9,11 +9,12 @@ export default (props) => {
     
     useEffect(() => {
         async function renderFeed() {
+            // eslint-disable-next-line no-unused-vars
             const { items: [first, ...rest]} = await feed();
             setBlock(first);
         }
         renderFeed();
-    }, []);
+    }, [props.setPlayer]);
 
     return(
         <div id="home" style={{ position: 'relative' }}>

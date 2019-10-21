@@ -11,7 +11,7 @@ export default () => {
             member,
             ...cast[member],
         };
-        const castBlock = <Block data={data} />
+        const castBlock = <Block data={data} key={member} />
         blocks.push(castBlock);
     }
 

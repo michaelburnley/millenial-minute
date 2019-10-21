@@ -18,7 +18,7 @@ export default (props) => {
             setEpisode(found_episode);
         }
         getFeed();
-    },[]);
+    },[episode_id]);
 
     return(
         <React.Fragment>

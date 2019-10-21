@@ -6,6 +6,58 @@ import Episodes from '../routes/episodes';
 import EpisodeDetail from '../routes/episodeDetail';
 import Player from './player';
 
+// export default () => {
+//     const [showPlayer, togglePlayer] = useState(false);
+//     const [player, updatePlayer] = useState({});
+//     const [paused, togglePaused] = useState(true);
+
+//     const audio = useRef(null);
+
+//     const startAudio = () => {
+//         audio.current.pause();
+//         audio.current.load();
+//         audio.current.play();
+//     }
+
+//     const setPlayer = async (data) => {
+        
+//         data.url !== player.url && window.PauseAllPlayButtons();
+
+//         const paused = data.url !== player.url ? true : false;
+//         await togglePaused(!paused);
+//         await updatePlayer(data);
+
+//         paused ? audio.current.pause() : startAudio();
+        
+//         return !paused;
+//     }
+
+//     const test = () => {
+//         togglePlayer(!showPlayer);
+//     }
+
+//     return(
+//         <React.Fragment>
+//             <Route 
+//                 path='/'
+//                 exact
+//                 render={(props) => <Home {...props} setPlayer={setPlayer} />}  />
+//             <Route 
+//                 path='/episodes'
+//                 render={(props) => <Episodes {...props} setPlayer={setPlayer} />}  exact/>
+//             <Route 
+//                 path='/about'
+//                 render={(props) => <About {...props} setPlayer={setPlayer}/>} />
+//             <Route
+//                 path='/episodes/:episode_id'
+//                 render={(props) => <EpisodeDetail {...props} setPlayer={setPlayer} />} />
+//             {
+//                 showPlayer && <Player {...player} ref={audio}/>
+//             }
+//         </React.Fragment>
+//     );
+// }
+
 class Routes extends Component {
     constructor(props) {
         super(props);
@@ -72,7 +124,7 @@ class Routes extends Component {
                     render={(props) => <About {...props} setPlayer={this.setPlayer}/>} />
                 <Route
                     path='/episodes/:episode_id'
-                    render={(props) => <EpisodeDetail {...props} setPlayer={this.setPlayer} />} />
+                    render={(props) => <EpisodeDetail {...props} setPlayer={this.setPlayer} exact />} />
                 {
                     showPlayer && <Player {...player} audioRef={this.audioRef}/>
                 }
