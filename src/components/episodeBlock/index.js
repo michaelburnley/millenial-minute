@@ -1,5 +1,7 @@
 import React from 'react';
 import moment from 'moment';
+import { Link } from 'react-router-dom';
+
 import './episodeBlock.css';
 
 const Detailed = ({ date, content, link, pubDate }) => (
@@ -31,16 +33,19 @@ export default ({ data, setPlayer, detailed }) => {
     const date = moment().format(`DD-MM-YYYY`, isoDate);
     const content = contentSnippet;
     const classes = detailed ? `block episode detailed` : `block episode`;
+    const handle = `/episodes/${link.split(`/`).pop()}`;
 
     return(
         <div className={classes}>
-            <div className={'image-wrapper'} onClick={clickHandler}>
-                <img onError={(e) => {
-                        e.target.src = itunes.image;
-                        e.target.style.border = 'solid white 14px';
-                        e.target.style.width = '90%';
-                    }}
-                    src={image_url} alt={title} />
+            <div className={'image-wrapper'}>
+                <Link to={handle}>
+                    <img onError={(e) => {
+                            e.target.src = itunes.image;
+                            e.target.style.border = 'solid white 14px';
+                            e.target.style.width = '90%';
+                        }}
+                        src={image_url} alt={title} />
+                </Link>
             </div>
             <div className='podcast content'>
                 <div className='image-wrapper play-button' onClick={clickHandler}><img alt='Play Episode' src="/images/play-button.png" /></div>
