@@ -119,3 +119,36 @@
 .detailed .podcast div {
     right: initial;
 }
+
+@media only screen 
+and (max-device-width: 1024px) 
+and (-webkit-min-device-pixel-ratio: 1) {
+
+    .detailed {
+
+        .block.episode {
+            height: 100%;
+        }
+
+        .info.title {
+            margin-top: calc(200px / 5);
+        }
+        .podcast.content {
+            width: 100%;
+            top: 300px;
+        }
+    
+    
+    
+        .main-block {
+            grid-column: 2/20;
+            height: 100%;
+        }
+    
+        .podcast div {
+            width: 100%;
+        }
+    }
+
+
+}

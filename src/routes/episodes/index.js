@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Block from '../../components/episodeBlock';
 import feed from '../../helpers';
 import Loader from 'react-loader-spinner'
-import './episodes.css'
+import './episodes.scss'
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 
 export default (props) => {

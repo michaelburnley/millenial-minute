@@ -1,0 +1,14 @@
+.episodes {
+    max-width: 75%;
+    margin: auto;
+}
+
+
+@media only screen 
+and (max-device-width: 1024px) 
+and (-webkit-min-device-pixel-ratio: 1) {
+    .block.episode {
+        width: 100%;
+        border-bottom: initial;
+    }
+}

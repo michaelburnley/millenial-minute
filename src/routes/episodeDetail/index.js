@@ -3,7 +3,7 @@ import _ from 'lodash';
 import feed from '../../helpers';
 import Block from '../../components/episodeBlock';
 import Subscribe from '../../components/subscribe';
-import './detail.css';
+import './detail.scss';
 
 
 export default (props) => {

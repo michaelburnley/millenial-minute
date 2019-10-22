@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import feed from '../../helpers';
 import Episode from '../../components/episodeBlock';
 import Subscribe from '../../components/subscribe';
-import './home.css';
+import './home.scss';
 
 export default (props) => {
     const [block, setBlock] = useState('');

@@ -3,7 +3,7 @@ import moment from 'moment';
 import { Link } from 'react-router-dom';
 import PlayButton from '../../components/playButton';
 
-import './episodeBlock.css';
+import './episodeBlock.scss';
 
 const Detailed = ({ date, content, link, pubDate }) => (
     <React.Fragment>

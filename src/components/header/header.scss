@@ -4,8 +4,17 @@ header {
 }
 
 header nav, header h1 {
-    width: 49%;
     display: inline-block;
+
+    @media only screen 
+    and (min-device-width: 1200px) {
+        width: 49%;
+    }    
+
+    @media only screen 
+    and (max-device-width: 768px) {
+        width: 100%;
+    }
 }
 
 .container {
