@@ -1,6 +1,49 @@
-.detail {
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
+.episode-detail {
+
+    .detail {
+        position: relative;
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+    
+        @media only screen 
+            and (max-device-width: 1024px) 
+            and (-webkit-min-device-pixel-ratio: 1) {
+
+                .episode-detail .detail .detailed.block.episode {
+                    height: 100%;
+                }
+                .detailed {
+                    .podcast.content {
+                        position: relative;
+                        top: initial;
+                        margin:auto;
+                        width: 90%;
+                    }
+                    .image-wrapper {
+                        position: relative;
+                    }
+                }
+                .detailed.block.episode {
+                    height: initial !important;
+                    margin-bottom:10%;
+                }
+                .subscribe {
+
+                }
+                .lineButton {
+                    border: none;
+                }
+
+                .header::before, .header::after {
+                    border: none;
+                    content: initial;
+                }
+            }
+
+            .platform {
+                width: initial;
+            }
+    
+    }
 }

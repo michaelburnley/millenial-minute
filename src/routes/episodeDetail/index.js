@@ -21,13 +21,13 @@ export default (props) => {
     },[episode_id]);
 
     return(
-        <React.Fragment>
+        <div className="episode-detail">
             <div className='episode detail'>
                 {
                     episode && <Block setPlayer={props.setPlayer} data={episode} detailed={true} />
                 }
+                <Subscribe />
             </div>
-            <Subscribe />
-        </React.Fragment>
+        </div>
     );
 }
