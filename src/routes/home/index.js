@@ -23,8 +23,8 @@ export default (props) => {
                     block && <Episode setPlayer={props.setPlayer} data={block} detailed={true} />
                 }
                 
-                <Subscribe />
                 </div>
+                <Subscribe />
         </div>
     );
 }

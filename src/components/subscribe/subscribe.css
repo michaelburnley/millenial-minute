@@ -33,7 +33,7 @@
     text-align: center;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
+    display: flex !important;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -93,8 +93,13 @@ transition: all .25s;
 }
 
 .lineButton {
-    border-bottom: 1px solid #000;
+    /* border-bottom: 1px solid #000; */
     position: relative;
     margin-top: 1.3em;
     margin-bottom: 1.25em;
+}
+
+.subscribe {
+    grid-column: 1/20;
+    grid-row: 4/6;
 }

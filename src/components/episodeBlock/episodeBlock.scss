@@ -61,7 +61,8 @@
     max-height: initial !important;
     width: 50%;
     left: 0;
-    position: absolute !important;
+    grid-column: 1/12;
+    grid-row: 1/10;
 }
 
 .detailed .image-wrapper {
@@ -71,11 +72,9 @@
 }
 
 .detailed .podcast.content {
-    width: 50%;
+    grid-column: 13/26;
+    grid-row: 2/25;
     height: initial;
-    position: absolute;
-    right: 0;
-    top: 5%;
 }
 
 .detailed .podcast div{
@@ -88,6 +87,11 @@
 }
 
 .detailed.block.episode {
+    grid-column: 1/21;
+    grid-row: 1/6;
+    display: grid;
+    grid-template-columns: repeat(25, 1fr);
+    grid-template-rows: repeat(25, 50px);
     max-width: initial !important;
     width: 100% !important;
     border-bottom: initial !important;
