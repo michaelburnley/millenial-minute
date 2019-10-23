@@ -1,5 +1,5 @@
 import React from 'react';
-import './subscribe.css';
+import './subscribe.scss';
 import platforms from './platforms.json';
 
 export default () => {

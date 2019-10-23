@@ -5,7 +5,7 @@ import PlayButton from '../../components/playButton';
 
 import './episodeBlock.scss';
 
-const Detailed = ({ date, content, link, pubDate }) => (
+const Detailed = ({ date, content }) => (
     <React.Fragment>
         <div className="info date">{ date }</div>
         <div className="info description">{ content }</div>
@@ -30,7 +30,7 @@ export default ({ data, setPlayer, detailed }) => {
     const episode_clean = episode_number && episode_number[0].replace(`E0`, `E`);
     const image_url = `/images/episodes/${episode_clean}.jpg`;
     
-    const date = moment().format(`DD-MM-YYYY`, isoDate);
+    const date = moment().format(`MM-DD-YYYY`, isoDate);
     const content = contentSnippet;
     const classes = detailed ? `block episode detailed` : `block episode`;
     const handle = `/episodes/${link.split(`/`).pop()}`;
