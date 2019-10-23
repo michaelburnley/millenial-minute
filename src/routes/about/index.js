@@ -16,11 +16,11 @@ export default () => {
     }
 
     return(
-        <React.Fragment>
+        <>
             {
                 blocks
             }
-        </React.Fragment>
+        </>
     );
     
 };

@@ -6,10 +6,10 @@ import PlayButton from '../../components/playButton';
 import './episodeBlock.scss';
 
 const Detailed = ({ date, content }) => (
-    <React.Fragment>
+    <>
         <div className="info date">{ date }</div>
         <div className="info description">{ content }</div>
-    </React.Fragment>
+    </>
 );
 
 export default ({ data, setPlayer, detailed }) => {

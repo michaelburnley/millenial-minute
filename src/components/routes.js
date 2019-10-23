@@ -113,7 +113,7 @@ class Routes extends Component {
         } = this.state;
 
         return(
-            <React.Fragment>
+            <>
                 <Switch>
                     <Route 
                         path='/'
@@ -145,7 +145,7 @@ class Routes extends Component {
                 {
                     showPlayer && <Player {...player} audioRef={this.audioRef}/>
                 }
-            </React.Fragment>
+            </>
         );
     }
 }
