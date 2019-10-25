@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
 import PlayButton from '../../components/playButton';
+import LazyLoad from 'react-lazyload';
 
 import './episodeBlock.scss';
 
@@ -31,8 +32,7 @@ export default ({ data, setPlayer, detailed }) => {
 
     const episode_number = title.match(/S[0-9]*E[0-9]*/);
     const episode_clean = episode_number && episode_number[0].replace(`E0`, `E`);
-    const [image_url, setImageUrl] = useState(`/images/episodes/${episode_clean}.jpg`);
-    // const image_url = `/images/episodes/${episode_clean}.jpg`;
+    const [image_url, setImageUrl] = useState(`https://storage.googleapis.com/millenial-minute/images/episodes/${episode_clean}.jpg`);
     
     const date = moment().format(`MM-DD-YYYY`, isoDate);
     const content = contentSnippet;
@@ -40,11 +40,11 @@ export default ({ data, setPlayer, detailed }) => {
     const handle = `/episodes/${link.split(`/`).pop()}`;
 
     const onHover = () => {
-        setImageUrl(`/images/episodes/${episode_clean}_quote.jpg`);
+        setImageUrl(`https://storage.googleapis.com/millenial-minute/images/episodes/${episode_clean}_quote.jpg`);
     }
 
     const exitHover = () => {
-        setImageUrl(`/images/episodes/${episode_clean}.jpg`);
+        setImageUrl(`https://storage.googleapis.com/millenial-minute/images/episodes/${episode_clean}.jpg`);
     }
 
 
@@ -52,14 +52,16 @@ export default ({ data, setPlayer, detailed }) => {
         <div className={classes}>
             <div className={'image-wrapper'}>
                 <Link to={handle}>
-                    <img onError={(e) => {
-                            e.target.src = itunes.image;
-                            e.target.style.border = 'solid white 14px';
-                            e.target.style.width = '90%';
-                        }}
-                        src={image_url} alt={title}
-                        onMouseEnter={onHover}
-                        onMouseOut={exitHover} />
+                    <LazyLoad height={319}>
+                        <img onError={(e) => {
+                                e.target.src = itunes.image;
+                                e.target.style.border = 'solid white 14px';
+                                e.target.style.width = '90%';
+                            }}
+                            src={image_url} alt={title}
+                            onMouseEnter={onHover}
+                            onMouseOut={exitHover} />
+                    </LazyLoad>
                 </Link>
             </div>
             <div className='podcast content'>
