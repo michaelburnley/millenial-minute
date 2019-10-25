@@ -7,6 +7,7 @@ import Episodes from '../routes/episodes';
 import EpisodeDetail from '../routes/episodeDetail';
 import Player from './player';
 import NotFound from '../routes/404';
+import Links from '../routes/links';
 
 // export default () => {
 //     const [showPlayer, togglePlayer] = useState(false);
@@ -140,6 +141,10 @@ class Routes extends Component {
                         path='/episodes/:episode_id'
                         exact
                         render={(props) => <EpisodeDetail {...props} setPlayer={this.setPlayer} />} />
+                    <Route
+                        path='/links'
+                        exact
+                        render={(props) => <Links {...props} setPlayer={this.setPlayer} />} />
                     <Route component={NotFound}/>
                 </Switch>
                 {

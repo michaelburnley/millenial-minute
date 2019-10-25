@@ -1,0 +1,71 @@
+.insta-link {
+    // color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 5%;
+
+    .link:hover {
+        background: white;
+        color: rgba(0,0,0,255);
+    }
+}
+
+.user-name.btn {
+    text-transform: lowercase;
+}
+
+.block.link {
+    border: 2px solid white;
+    max-width: 500px;
+    margin: auto;
+    background: transparent;
+    padding: 1%;
+
+    @media only screen 
+    and (max-device-width: 1024px) 
+    and (-webkit-min-device-pixel-ratio: 1) {    
+        padding-top: 5%;
+        padding-bottom: 5%;
+        width: 90%;
+    }
+}
+
+.btn-link {
+    color: #fff;
+    border: 2px solid #fff;
+    text-align: center;
+    position: relative;
+    -webkit-transition: all .25s cubic-bezier(.08,.59,.29,.99);
+    transition: all .25s cubic-bezier(.08,.59,.29,.99);
+    z-index: 2;
+    background: transparent;
+}
+
+.block.links {
+    margin-top: 5%;
+}
+
+header, #footer {
+    display: none;
+}
+
+.App, body {
+    background: linear-gradient(0deg,#fd8f67,#d463a3);
+    height: 1000px;
+}
+
+.img-circle {
+    position: relative;
+    width: 96px;
+    height: 96px;
+    display: block;
+    background-color: rgba(0,0,0,.1);
+    margin: 0 auto 10px;
+    border-radius: 50%;
+    overflow: hidden;
+    img {
+        width: 0;
+        min-width: 96px;
+        min-height: 96px;
+    }
+}
