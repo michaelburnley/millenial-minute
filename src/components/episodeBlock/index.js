@@ -40,11 +40,11 @@ export default ({ data, setPlayer, detailed }) => {
     const handle = `/episodes/${link.split(`/`).pop()}`;
 
     const onHover = () => {
-        setImageUrl(`http://localhost:3000/images/episodes/${episode_clean}_quote.jpg`);
+        setImageUrl(`/images/episodes/${episode_clean}_quote.jpg`);
     }
 
     const exitHover = () => {
-        setImageUrl(`http://localhost:3000/images/episodes/${episode_clean}.jpg`);
+        setImageUrl(`/images/episodes/${episode_clean}.jpg`);
     }
 
 
