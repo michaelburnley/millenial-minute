@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Home from '../routes/home';
 import About from '../routes/about';
+import Contact from '../routes/contact';
 import Episodes from '../routes/episodes';
 import EpisodeDetail from '../routes/episodeDetail';
 import Player from './player';
+import NotFound from '../routes/404';
 
 // export default () => {
 //     const [showPlayer, togglePlayer] = useState(false);
@@ -111,24 +113,39 @@ class Routes extends Component {
         } = this.state;
 
         return(
-            <React.Fragment>
-                <Route 
-                    path='/'
-                    exact
-                    render={(props) => <Home {...props} setPlayer={this.setPlayer} />}  />
-                <Route 
-                    path='/episodes'
-                    render={(props) => <Episodes {...props} setPlayer={this.setPlayer} />}  exact/>
-                <Route 
-                    path='/about'
-                    render={(props) => <About {...props} setPlayer={this.setPlayer}/>} />
-                <Route
-                    path='/episodes/:episode_id'
-                    render={(props) => <EpisodeDetail {...props} setPlayer={this.setPlayer} exact />} />
+            <>
+                <Switch>
+                    <Route 
+                        path='/'
+                        exact
+                        render={(props) => <Home {...props} setPlayer={this.setPlayer} />}  />
+                    <Route 
+                        path='/episodes'
+                        exact
+                        render={(props) => <Episodes {...props} setPlayer={this.setPlayer} />}  />
+                    <Route
+                        path='/episodes/:episode_id'
+                        exact
+                        render={(props) => <EpisodeDetail {...props} setPlayer={this.setPlayer} />} />
+                    <Route 
+                        path='/contact'
+                        exact
+                        render={(props) => <Contact {...props} setPlayer={this.setPlayer} />}  />
+
+                    <Route 
+                        path='/about'
+                        exact
+                        render={(props) => <About {...props} setPlayer={this.setPlayer}/>} />
+                    <Route
+                        path='/episodes/:episode_id'
+                        exact
+                        render={(props) => <EpisodeDetail {...props} setPlayer={this.setPlayer} />} />
+                    <Route component={NotFound}/>
+                </Switch>
                 {
                     showPlayer && <Player {...player} audioRef={this.audioRef}/>
                 }
-            </React.Fragment>
+            </>
         );
     }
 }

@@ -21,10 +21,10 @@ export default (props) => {
 
     const button = toggle ? `/images/pause-button.png` : `/images/play-button.png`;
     return(
-        <React.Fragment>
+        <>
             <div className='image-wrapper play-button' onClick={clickHandler}>
                 <img alt='Play Episode' src={button} />
             </div>            
-        </React.Fragment>
+        </>
     );
 }

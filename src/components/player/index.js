@@ -1,5 +1,5 @@
 import React from 'react';
-import './player.css';
+import './player.scss';
 
 export default (props) => {
     const {

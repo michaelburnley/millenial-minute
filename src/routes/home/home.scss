@@ -5,6 +5,9 @@
     max-width: 1200px;
     margin: auto;
     left: 0;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(6, 100px);
     right: 0;
     left: 0;
     right: 0;
@@ -36,6 +39,7 @@
             .podcast.content {
                 width: 100%;
                 top: 300px;
+                grid-column: 1/26;
             }
 
             .detailed .info.title {

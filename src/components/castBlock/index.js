@@ -1,5 +1,5 @@
 import React from 'react';
-import './cast.css';
+import './cast.scss';
 
 export default ({ data: { age, bio, image, member }}) => (
     <div className="cast block">

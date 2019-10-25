@@ -1,15 +1,19 @@
 header {
     display: inline-block;
     padding-top: 10%;
+
+    h1 {
+        grid-column: 11/18;
+    }
+
+    nav {
+        grid-column: 2/11;
+        font-size: 25px;
+    }
 }
 
 header nav, header h1 {
     display: inline-block;
-
-    @media only screen 
-    and (min-device-width: 1200px) {
-        width: 49%;
-    }    
 
     @media only screen 
     and (max-device-width: 768px) {
@@ -20,6 +24,10 @@ header nav, header h1 {
 .container {
     max-width: 1615px;
     margin: auto;
+    display: grid;
+    @media only screen and (min-device-width: 1200px) {
+        grid-template-columns: repeat(20, 1fr);
+    }
 }
 
 header, #footer {
