@@ -132,7 +132,11 @@
 .detailed.block.episode {
     grid-column: 1/21;
     grid-row: 1/6;
-    display: grid;
+    @media only screen 
+    and (min-device-width: 1024px) 
+    and (-webkit-min-device-pixel-ratio: 1) {
+        display: grid;
+    }
     grid-template-columns: repeat(25, 1fr);
     grid-template-rows: repeat(25, 50px);
     max-width: initial !important;
