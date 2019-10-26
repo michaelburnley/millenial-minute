@@ -58,8 +58,8 @@
 }
 
 .detailed.image-wrapper {
-    max-width: 450px !important;
-    max-height: initial !important;
+    max-width: 450px;
+    max-height: initial;
     width: 50%;
     left: 0;
     grid-column: 1/12;
@@ -68,7 +68,7 @@
 
 .detailed {
     .image-wrapper {
-        max-width: 500px !important;
+        max-width: 500px;
         left: 0;
         position: absolute;
     }
@@ -80,11 +80,11 @@
     }
     .podcast div {
         right: initial;
-        position: relative !important;
+        position: relative;
     }
     .image-wrapper img {
-        max-width: initial !important;
-        max-height: initial !important;
+        max-width: initial;
+        max-height: initial;
     }
     .info.title {
         font-size: 40px;
@@ -98,8 +98,19 @@
         text-align: left;
         font-size: 20px;
     }
-    .play-button {
-        display: none;
+
+    .detailed-play {
+        border-bottom: 5px solid black;
+        div {
+            display: inline-block;
+            width: 30%;
+            text-align: left;
+        }
+        .image-wrapper {
+            img {
+                width: 50%;
+            }
+        }
     }
 
     @media only screen 
@@ -139,9 +150,9 @@
     }
     grid-template-columns: repeat(25, 1fr);
     grid-template-rows: repeat(25, 50px);
-    max-width: initial !important;
-    width: 100% !important;
-    border-bottom: initial !important;
+    max-width: initial;
+    width: 100%;
+    border-bottom: initial;
     height: 450px;
     margin-bottom: 10%;
 }

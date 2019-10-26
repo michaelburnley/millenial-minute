@@ -65,7 +65,7 @@ export default ({ data, setPlayer, detailed }) => {
                 </Link>
             </div>
             <div className='podcast content'>
-                <PlayButton setPlayer={setPlayer} url={url} image={image} title={title} />
+                <PlayButton detailed={detailed} setPlayer={setPlayer} url={url} image={image} title={title} />
                 <div className="info title">{ title.replace(/S[0-9]*E[0-9]*:/, ``) }</div>
                 {
                     detailed && <Detailed content={content} date={date} link={link} pubDate={pubDate} />
